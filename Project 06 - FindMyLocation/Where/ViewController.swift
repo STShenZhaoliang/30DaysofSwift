@@ -20,7 +20,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+        return .LightContent
     }
     
     @IBAction func myLocationButtonDidTouch(sender: AnyObject) {
@@ -31,12 +31,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
-    }
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -74,11 +68,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             self.locationLabel.text = locality! +  postalCode! +  administrativeArea! +  country!
         }
-        
     }
-
-    
-    
-
 }
 
