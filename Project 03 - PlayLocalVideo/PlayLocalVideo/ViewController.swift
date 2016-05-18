@@ -33,13 +33,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func playVideoButtonDidTouch(sender: AnyObject) {
-        
         let path = NSBundle.mainBundle().pathForResource("emojizone", ofType: "mp4")
-        
         playerView = AVPlayer(URL: NSURL(fileURLWithPath: path!))
-        
         playViewController.player = playerView
-        
         presentViewController(playViewController, animated: true) {
             self.playViewController.player?.play()
         }
