@@ -31,8 +31,6 @@ class HomeViewController: UIViewController {
     private struct Storyboard {
         static let CellIdentifier = "InterestCell"
     }
-    
-
 }
 
 extension HomeViewController : UICollectionViewDataSource {
@@ -47,11 +45,7 @@ extension HomeViewController : UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! InterestCollectionViewCell
-        
         cell.interest = self.interests[indexPath.item]
-        
         return cell
-        
     }
-    
 }
