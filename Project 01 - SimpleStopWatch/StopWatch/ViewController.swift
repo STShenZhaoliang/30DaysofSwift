@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var IsPlaying = false
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+        return .LightContent
     }
     
     override func viewDidLoad() {
@@ -42,24 +42,21 @@ class ViewController: UIViewController {
         }
         playBtn.enabled = false
         pauseBtn.enabled = true
-        Timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("UpdateTimer"), userInfo: nil, repeats: true)
+        Timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         IsPlaying = true
     }
     
     @IBAction func pauseButtonDidTouch(sender: AnyObject) {
-        
         playBtn.enabled = true
         pauseBtn.enabled = false
         Timer.invalidate()
         IsPlaying = false
-        
     }
     
-    func UpdateTimer() {
+    func updateTimer() {
         Counter = Counter + 0.1
         timeLabel.text = String(format: "%.1f", Counter)
     }
-    
     
 }
 
