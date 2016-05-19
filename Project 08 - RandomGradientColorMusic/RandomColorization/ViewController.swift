@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             print(audioError)
         }
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "randomColor", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: #selector(randomColor) , userInfo: nil, repeats: true)
         
         
         let redValue = CGFloat(drand48())
@@ -70,6 +70,8 @@ class ViewController: UIViewController {
         let redValue = CGFloat(drand48())
         let blueValue =  CGFloat(drand48())
         let greenValue = CGFloat(drand48())
+
+        print(redValue, blueValue, greenValue)
         
         
         self.view.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1.0)
