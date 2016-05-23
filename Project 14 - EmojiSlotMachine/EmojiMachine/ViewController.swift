@@ -62,7 +62,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         bounds = goButton.bounds
         imageArray = ["👻","👸","💩","😘","🍔","🤖","🍟","🐼","🚖","🐷"]
         
-        for(var i = 0; i < 100; i++) {
+        for _ in 0..<100 {
             dataArray1.append((Int)(arc4random() % 10 ))
             dataArray2.append((Int)(arc4random() % 10 ))
             dataArray3.append((Int)(arc4random() % 10 ))
