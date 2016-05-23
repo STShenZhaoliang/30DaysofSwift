@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         openButton.target = self.revealViewController()
-        openButton.action = Selector("revealToggle:")
-        
+//        openButton.action = #selector(revealToggle(_:))
+
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         if (varView == 0) {

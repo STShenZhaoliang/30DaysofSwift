@@ -25,6 +25,10 @@ class RotationViewController: UIViewController {
 
     }
 
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        UIView.commitAnimations()
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -32,7 +32,7 @@ class BackTableVC: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
-        var cell = tableView.dequeueReusableCellWithIdentifier(TableArrary[indexPath.row], forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(TableArrary[indexPath.row], forIndexPath: indexPath) as UITableViewCell
         
         cell.textLabel?.text = TableArrary[indexPath.row]
         cell.backgroundColor = UIColor.clearColor()
@@ -44,7 +44,7 @@ class BackTableVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         
         selectedCell.contentView.backgroundColor = UIColor(red:0.245, green:0.247, blue:0.272, alpha:0.817)
     
