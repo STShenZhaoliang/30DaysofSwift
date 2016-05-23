@@ -30,7 +30,7 @@ class AnimationCollectionViewCell: UICollectionViewCell {
     }
     
     private func addTapEventHandler() {
-        backButton.addTarget(self, action: Selector("backButtonDidTouch:"), forControlEvents: .TouchUpInside)
+        backButton.addTarget(self, action: #selector(backButtonDidTouch), forControlEvents: .TouchUpInside)
     }
     
     func backButtonDidTouch(sender: UIGestureRecognizer) {

@@ -77,7 +77,13 @@ class ViewController: UICollectionViewController {
             collectionView.scrollEnabled = false
         }
 
-        UIView.animateWithDuration(Constants.AnimationDuration, delay: Constants.AnimationDelay, usingSpringWithDamping: Constants.AnimationSpringDamping, initialSpringVelocity: Constants.AnimationInitialSpringVelocity, options: [], animations: animations, completion: completion)
+        UIView.animateWithDuration(Constants.AnimationDuration,
+                                   delay: Constants.AnimationDelay,
+                                   usingSpringWithDamping: Constants.AnimationSpringDamping,
+                                   initialSpringVelocity: Constants.AnimationInitialSpringVelocity,
+                                   options: [],
+                                   animations: animations,
+                                   completion: completion)
     }
     
     func backButtonDidTouch() {

@@ -16,17 +16,12 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         imageView = UIImageView(image: UIImage(named: "steve"))
-        
         setUpScrollView()
         scrollView.delegate = self
-        
         setZoomScaleFor(scrollView.bounds.size)
         scrollView.zoomScale = scrollView.minimumZoomScale
-        
         recenterImage()
-        
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
