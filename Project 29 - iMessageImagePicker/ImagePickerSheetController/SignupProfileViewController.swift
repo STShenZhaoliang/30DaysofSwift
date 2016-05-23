@@ -28,7 +28,7 @@ class SignupProfileViewController: UIViewController
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+        return .LightContent
     }
     
     @IBAction func pickProfileImage(tap: UITapGestureRecognizer)
