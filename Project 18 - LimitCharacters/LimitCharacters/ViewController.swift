@@ -28,10 +28,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         
         tweetTextView.backgroundColor = UIColor.clearColor()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"keyBoardWillShow:", name:UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"keyBoardWillHide:", name:UIKeyboardWillHideNotification, object: nil)
-        
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(keyBoardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(keyBoardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,9 +50,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         let newLength = (myTextViewString?.characters.count)! + range.length
         
         return newLength < 140
-        
-        
-        
     }
     
     func keyBoardWillShow(note:NSNotification) {
@@ -106,8 +102,5 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)
     }
-
-    
-
 }
 
